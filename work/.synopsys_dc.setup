@@ -1,0 +1,19 @@
+################################
+##Library Setting
+###################################
+echo "****** Library Setting ******"
+echo "selected library smic18"
+ 
+ 
+set search_path  "$search_path ../rtl"
+ 
+set_app_var target_library ../lib/smic18_ss.db 
+
+set_app_var link_library ../lib/smic18_ss.db 
+ 
+ 
+set hdlin_enable_vpp true
+set hdlin_translate_off_skip_text true
+
+ 
+echo "****** end ******"

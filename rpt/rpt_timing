@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : register
+Version: L-2016.03-SP1
+Date   : Sat Feb 11 22:05:23 2023
+****************************************
+
+Operating Conditions: worst   Library: smic18_ss
+Wire Load Model Mode: segmented
+
+  Startpoint: clk (clock source 'clk')
+  Endpoint: out[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  register           reference_area_20000  smic18_ss
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (fall edge)                    5.00       5.00
+  clk (in)                                 0.00       5.00 f
+  U30/Z (AND2HD1X)                         0.41       5.41 f
+  U61/Z (OAI21HD1X)                        0.26       5.67 r
+  U60/Z (AOI211HD1X)                       0.24       5.91 f
+  U62/Z (NAND2B1HDLX)                      0.31       6.22 f
+  U20/Z (AOI31HD1X)                        0.20       6.41 r
+  U21/Z (INVHDLX)                          0.22       6.64 f
+  out[0] (out)                             0.00       6.64 f
+  data arrival time                                   6.64
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  clock uncertainty                       -0.20       9.80
+  output external delay                   -1.00       8.80
+  data required time                                  8.80
+  -----------------------------------------------------------
+  data required time                                  8.80
+  data arrival time                                  -6.64
+  -----------------------------------------------------------
+  slack (MET)                                         2.16
+
+
+1

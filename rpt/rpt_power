@@ -1,0 +1,54 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : register
+Version: L-2016.03-SP1
+Date   : Sat Feb 11 22:05:23 2023
+****************************************
+
+
+Library(s) Used:
+
+    smic18_ss (File: /home/hs/DC_learning/lib/smic18_ss.db)
+
+
+Operating Conditions: worst   Library: smic18_ss
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+register               reference_area_20000
+                                         smic18_ss
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  24.1808 uW   (23%)
+  Net Switching Power  =  81.7588 uW   (77%)
+                         ---------
+Total Dynamic Power    = 105.9396 uW  (100%)
+
+Cell Leakage Power     =  26.9144 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  2.4068e-02        7.9398e-02           26.5171            0.1035  (  97.66%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  1.1318e-04        2.3611e-03            0.3973        2.4746e-03  (   2.34%)
+--------------------------------------------------------------------------------------------------
+Total          2.4181e-02 mW     8.1759e-02 mW        26.9144 nW         0.1060 mW
+1
